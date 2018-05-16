@@ -46,7 +46,6 @@ def save_flows(flows, image, save_dir, num, bound):
     # save the image
     save_img = os.path.join(out_folder, save_dir,
                             'img_{:05d}.jpg'.format(num))
-    # image = image.resize((340, 256))
     image = Image.fromarray(image)
     image = image.resize((340, 256))
     misc.imsave(save_img, image)
